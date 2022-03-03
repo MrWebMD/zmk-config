@@ -49,10 +49,36 @@
 	};
 	combos {
 		compatible = "zmk,combos";
-		combo_arrowup {
-			timeout-ms = <50>;
-			key-positions = <0 1>;
-			bindings = <&kp TILDE>;
+		combo_grave {
+			timeout-ms = <5000>;
+			// Right shift (52) and escape (0)
+			key-positions = <0 52>;
+			// Outputs Backtick OR grave
+			bindings = <&kp GRAVE>;
+		};
+		combo_upArrow {
+			timeout-ms = <5000>;
+			// Left shift (41) and W (16)
+			key-positions = <16 41>;
+			bindings = <&kp UP_ARROW>;
+		};
+		combo_downArrow {
+			timeout-ms = <5000>;
+			// Left shift (41) and S (30)
+			key-positions = <30 41>;
+			bindings = <&kp DOWN_ARROW>;
+		};
+		combo_rightArrow {
+			timeout-ms = <5000>;
+			// Left shift (41) and D (31)
+			key-positions = <31 41>;
+			bindings = <&kp RIGHT_ARROW>;
+		};
+		combo_leftArrow {
+			timeout-ms = <5000>;
+			// Left shift (41) and A (29)
+			key-positions = <29 41>;
+			bindings = <&kp LEFT_ARROW>;
 		};
 	};
 };
